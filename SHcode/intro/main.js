@@ -15,7 +15,7 @@ var app = http.createServer(function(request,response){
     if(_url == '/favicon.ico'){
         response.writeHead(404);
         response.end();
-        return;
+        return;//dlfkjasldfk
     }
     response.writeHead(200);
     var template = `
