@@ -1,14 +1,15 @@
+  
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
- 
+
 var app = http.createServer(function(request,response){
     var _url = request.url;
     var queryData = url.parse(_url, true).query;
     var pathname = url.parse(_url, true).pathname;
     if(pathname === '/'){
       if(queryData.id === undefined){
- 
+
         fs.readdir('./data', function(error, filelist){
           var title = 'Welcome';
           var description = 'Hello, Node.js';
@@ -37,9 +38,9 @@ var app = http.createServer(function(request,response){
           response.writeHead(200);
           response.end(template);
         })
- 
- 
- 
+
+
+
       } else {
         fs.readdir('./data', function(error, filelist){
           var title = 'Welcome';
@@ -77,8 +78,8 @@ var app = http.createServer(function(request,response){
       response.writeHead(404);
       response.end('Not found');
     }
- 
- 
- 
+
+
+
 });
 app.listen(3000);
