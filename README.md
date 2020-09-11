@@ -2,7 +2,11 @@
 
 ---
 
+<br/>
+
 ## 📌 Javascript
+
+### 	<br/>
 
 ### 	1. const, let
 
@@ -14,7 +18,7 @@
 
 - 자바스크립트에서는 한 번 초기화했던 변수에 다른 값을 할당하는 경우가 적기 때문에 기본적으로 const를 사용하고 다른 값을 할당해야 하는 상황이 생겼을 때 let을 사용
 
-  
+  <br/>
 
 ### 	2. 객체 리터럴
 
@@ -25,7 +29,7 @@
   {name, age} //ES2015
   ```
 
-  
+  <br/>
 
   ### 3.  프로미스
 
@@ -54,15 +58,21 @@
   
   ```
 
-  #### 프로미스의 세가지 상태
+  #### <br/>프로미스의 세가지 상태
 
   - Pending(대기) : 비동기 처리 로직이 아직 완료되지 않은 상태
+
   - Fulfilled(이행) : 비동기 처리가 완료되어 프로미스가 결과 값을 반환해준 상태
+
   - Rejected(실패) : 비동기 처리가 실패하거나 오류가 발생한 상태
+
+    <br/>
 
   ![img](https://joshua1988.github.io/images/posts/web/javascript/promise.svg)
 
 ##  
+
+### <br/>
 
 ### 4.  Async/await
 
@@ -90,13 +100,23 @@
 
 ## 📌 Node
 
-### 	1. Non-blocking
+### <br/>	1. Non-blocking
 
 - Non-blocking : 이전 작업이 완료될 때까지 대기하지 낳고 다음 작업을 수행함
 - Blocking : 이전 작업이 끝나야만 다음 작업을 수행
 
-### 	2. Single-thread
+### <br/>	2. Single-thread
 
 - 노드는 싱글스레드
 - 싱글스레드 + 논 블로킹 모델
+
+<br/>
+
+
+
+
+
+
+
+
 
