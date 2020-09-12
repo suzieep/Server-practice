@@ -1,12 +1,6 @@
 # Server-study
 
----
-
-<br/>
-
 ## 📌 Javascript
-
-### 	<br/>
 
 ### 	1. const, let
 
@@ -30,6 +24,10 @@
   ```
 
   <br/>
+
+  
+
+  
 
   ### 3.  프로미스
 
@@ -72,9 +70,13 @@
 
 ##  
 
+#### <br/>
+
+#### 		- Promise chaining : 여러개의 프로미스를 연결해서 사용
+
 ### <br/>
 
-### 4.  Async/await
+### 	4.  Async/await
 
 - 프로미스를 사용해도 then과 catch가 반복됨 -> Async/await 으로 코드 정리
 
@@ -96,6 +98,12 @@
   func()
   ```
 
+<br/>
+
+
+
+
+
 ---
 
 ## 📌 Node
@@ -112,7 +120,16 @@
 
 <br/>
 
+### 	3. REPL
 
+- Read - 유저의 값을 받아들여 Javascript 데이터 구조로 저장
+- Eval - 데이터 처리
+- Print - 처리결과를 출력
+- Loop - 유저가 ^C를 눌러 종료할 때까지 반복
+
+---
+
+## 
 
 
 
