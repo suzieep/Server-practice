@@ -129,6 +129,8 @@
 - Print - 처리결과를 출력
 - Loop - 유저가 ^C를 눌러 종료할 때까지 반복
 
+<br/>
+
 ---
 
 ## 📌 Module
@@ -195,7 +197,28 @@ console.log('after release : ', decipheredOutput);
 - Print - 처리결과를 출력
 - Loop - 유저가 ^C를 눌러 종료할 때까지 반복
 
+## <br/>📌 REST API
 
+| HTTP 메서드 | 주소           | 역할                     |
+| ----------- | -------------- | ------------------------ |
+| GET         | /              | restFront.html 파일 제공 |
+| GET         | /about         | About.html 파일 제공     |
+| GET         | /users         | 사용자 목록 제공         |
+| GET         | 기타           | 기타 정적 파일 제공      |
+| POST        | /user          | 사용자 등록              |
+| PUT         | /user/사용자id | 해당 id의 사용자 수정    |
+| DELETE      | /user/사용자id | 해당 id의 사용자 제거    |
 
+## <br/>📌 HTTP Status Code
 
+| Code | Status                  |
+| ---- | ----------------------- |
+| 200  | 요청 성공               |
+| 201  | 원격지 서버에 파일 생성 |
+| 302  | 페이지 이동             |
+| 304  | 로컬 캐쉬정보 이용      |
+| 401  | 인증  실패              |
+| 403  | 접근 금지               |
+| 404  | 페이지 없음             |
+| 500  | 서버 에러               |
 
