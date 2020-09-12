@@ -1,5 +1,7 @@
 # Server-study
 
+<br/>
+
 ## 📌 Javascript
 
 ### 	1. const, let
@@ -129,9 +131,69 @@
 
 ---
 
-## 
+## 📌 Module
+
+### <br/>	1. Crypto
+
+- 해시 생성과 암호화를 수행하는 모듈
+- 복호화 불가능한 암호화 방식
+- 비밀번호 암호화에 주로 사용
+- 주로 해시기법 사용
+
+### <br/>
+
+```javascript
+var crypto = require('crypto');
+
+var shasum = crypto.createHash('sha512');
+
+shasum.update('q!w@e#r$');
+
+var output = shasum.digest('hex');
+
+console.log('Result from Crpyto_Hashing : ', output);
+```
+
+해싱의 가장 큰 특징은
+
+1. 같은 문자열을 해싱하면 같은 값이 나온다
+2. 다른 문자열을 해싱해도 같은 값이 나올 수도 있다.(확률이 매우 적지만)
+3. 원래 값으로 돌리는 것은 불가능하다.
+
+```javascript
+var crypto = require('crypto');
+
+var key= 'lumpen';
+var input = 'password';
+
+var cipher = crypto.createCipher('aes192', key);
+cipher.update(input,'utf8', 'base64');
+var cipheredOutput = cipher.final('base64');
+
+var decipher = crypto.createDecipher('aes192', key);
+decipher.update(cipheredOutput, 'base64', 'utf8');
+var decipheredOutput = decipher.final('utf8');
+
+console.log('before : ',input);
+console.log('after encryption : ', cipheredOutput);
+console.log('after release : ', decipheredOutput);
+```
 
 
+
+### <br/>	2. File system module
+
+- 파일 시스템에 접근하는 모듈
+- 파일 생성 삭제 읽기 쓰기 등 수행하거나 폴더 생성 삭제
+
+<br/>
+
+### 	3. REPL
+
+- Read - 유저의 값을 받아들여 Javascript 데이터 구조로 저장
+- Eval - 데이터 처리
+- Print - 처리결과를 출력
+- Loop - 유저가 ^C를 눌러 종료할 때까지 반복
 
 
 
