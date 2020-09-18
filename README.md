@@ -1,8 +1,113 @@
 # Server-study
 
 <br/>
-## 📌 Javascript 기초 문법
 
+## 📌Javascript 기초 문법
+
+### 1. 기본 자료형
+#### (1) 원시 자료형 (Primitive Type)
+- Boolean : ture or false
+- Number : 숫자 자료형, 64bit 실수형(double)
+- String : 문자열 자료형, **"와 '를 동일하게 취급**
+- Symbol : 유일하고 변경할 수 없는 타입
+- Null : Object type, '값'이 정해지지 않은 것을 의미
+- Undefined : 타입 미지정, 초기화 안된 변수나 존재하지 않는 값
+<br/>
+
+✔ null과 undefined는 동등 연산자(==)와 일치 연산자(===)로 비교할 때, 그 결괏값이 다름
+```javascript
+null == undefined; // true
+null === undefined; // false
+//null과 undefined는 타입을 제외하면 같은 의미지만, 타입이 다르므로 일치하지는 않습니다.
+```
+
+(undefined type을 제외한 모든 것이 객체이므로 <br/>
+원시 타입은 값이 정해진 객체로 취급되어 객체로서의 특징도 가진다.)
+<br/>
+<br/>
+
+#### (2) 객체 자료형(Object Type)
+- Object : 자바스크립트의 기본 타입, 프로퍼티의 정렬되지 않은 집합
+  - Array
+    - 객체 타입
+    - 배열 요소의 타입이 고정 X -> 같은 배열 내 타입이 다를 수 있음
+    - 배열 요소의 인텍스가 연속적이지 않아도 된 -> 배열요소가 비어있을 수 있다
+    ```javascript
+    var arr = [a,b,c];//배열생성
+    var arr = Array(a,b,c);//배열생성
+
+    arr.push(a);//배열추가
+    arr[2] = a;//배열추가
+
+    for (var item of arr){
+      //arr의 elements 출력
+      return item;
+    }
+    //for-of 엘리먼트를 하나씩 가져옴
+
+    for (var item in arr){
+      //arr의 elements 출력
+      return arr[item];
+    }
+    //for-in index를 하나씩 가져옴
+
+    arr.forEach(
+      //arr의 elements 출력
+      item => return item
+    );
+    //element를 하나씩 가져옴, callback 함수를 등록할 수 있음
+
+    ```
+
+ <br/>
+
+  - Function
+    - 객체 타입
+    - 하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록
+    - javascript의 함수는 **일급객체**
+      <br/> > 일급객체의 조건
+        - 변수나 데이터 구조에 담을 수 있다
+        - 다른 함수의 parameter로 전달 가능
+        - 반환 값으로 사용 가능
+        - 런타임 시 생성 가능
+    ```javascript
+    function funcName (params){
+
+    } //함수 선언식 (호이스팅에 영향 받음)
+
+    var funcName = function(params){
+
+    }//함수 표현식 (호이스팅 영향X, 함수를 변수에 할당<-일급객체)
+   
+    ```
+
+### 2. JSON (JavaScript Object Notation)
+- 자바스크립트 객체 표현식
+- name, value로 구성된 propertydml 정렬되지 않은 집합
+- property의 값으로 함수가 오면 이 property를 method라 함
+- 클라이언트와 통신 시 주로 사용 application/json
+
+```javascript
+var object = {
+  keya : value,//property
+  keyb : value1
+}
+//객체 접근
+object.keya
+object['keya']
+
+
+var object = [
+  { key1 : value1, key2 : value2 },
+  { key1 : value3, key2 : value4 },
+  { key1 : value5, key2 : value6 },
+]
+//객체 접근
+object[idx].key1
+object[idx]['key1']
+```
+<br/>
+<br/>
 
 ## 📌 Javascript 최신 문법
 
@@ -41,8 +146,9 @@
 
   
 
-  ### 3.  프로미스
-
+ 
+ 
+### 3. 프로미스
 - 콜백 대신 프로미스 사용 -> 콜백 지옥 현상 극복
 
   ```javascript
@@ -112,8 +218,27 @@
 
 <br/>
 
+### 5. 템플릿 문자열
+- 백틱(`)을 사용해 문자열 안에 변수를 넣을 수 있다.
+```javascript
+num1 + '더하기' + num2 + '는\'';//가독성도 떨어지고 escape 문 때문에 지저분함
+`${num3} 더하기 ${num4}는 '${result}'`;//${변수}형식으로 기호없이 문자열에 넣을 수 있음
+```
+<br/>
 
+### 6. 화살표 함수
+- 간결한 표현식
+- 매개 변수가 하나면 소괄호 생략 가능
+- 상황에 따라 return문 생략 가능
 
+```javascript
+var funcName = (params) => {
+
+}//함수 표현식 생성 - 화살표함수
+```
+
+<br/>
+<br/>
 
 
 ---
