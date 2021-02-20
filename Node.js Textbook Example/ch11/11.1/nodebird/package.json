@@ -10,7 +10,7 @@
   "author": "ZeroCho",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^8.2.0",
     "express": "^4.16.3",
